@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="pet_shop.Views.MascotaForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:pet_shop.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{StaticResource ImagenFondo}"
+    mc:Ignorable="d">
+    <Grid>
+        <Image
+            Height="80"
+            Margin="0,30,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Source="C:\Users\34618\Workspace_C#\club_papaya\Assets\boat.png" />
+
+        <StackPanel
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+            <!--  Titulo  -->
+            <TextBlock
+                x:Name="titulo"
+                Grid.Row="0"
+                Margin="0,0,0,10"
+                Foreground="{StaticResource PaginaTitulo}"
+                Style="{ThemeResource HeaderTextBlockStyle}"
+                Text="Registrar Mascota" />
+
+            <!--  Validacion Mascota  -->
+            <InfoBar
+                x:Name="alert"
+                Margin="0,0,0,10"
+                IsOpen="False" />
+
+            <!--  Nombre  -->
+            <TextBox
+                x:Name="txtNombre"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                GotFocus="NombreSeleccionado"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Nombre"
+                TextChanged="NombreCambiarTexto" />
+            <!--  Validacion Nombre  -->
+            <TextBlock
+                x:Name="errorNombre"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
+
+            <!--  MooringNumber  -->
+            <TextBox
+                x:Name="txtRaza"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                GotFocus="RazaSeleccionada"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Raza"
+                TextChanged="RazaCambiarTexto" />
+            <!--  Validacion Raza  -->
+            <TextBlock
+                x:Name="errorRaza"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
+
+            <!--  Edad  -->
+            <TextBox
+                x:Name="txtEdad"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                Foreground="{StaticResource TextColor}"
+                GotFocus="EdadSeleccionada"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Edad"
+                TextChanged="EdadCambiarTexto" />
+            <!--  Validacion Edad  -->
+            <TextBlock
+                x:Name="errorEdad"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
+
+            <!--  Lista de Usuarios  -->
+            <ComboBox
+                x:Name="cmbUsuarios"
+                Margin="0,0,0,10"
+                Background="{StaticResource InputBoxColor}"
+                DisplayMemberPath="Nombre"
+                Foreground="{StaticResource TextColor}"
+                ItemsSource="{x:Bind Usuarios, Mode=OneWay}"
+                PlaceholderForeground="{StaticResource PlaceHolderColor}"
+                PlaceholderText="Seleccione un usuario"
+                SelectionChanged="CmbUsuarios" />
+           
+            <!--  Validacion Usuario  -->
+            <TextBlock
+                x:Name="errorSocio"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Visibility="Collapsed" />
+
+            <!--  Boton guardar  -->
+            <Button
+                x:Name="btnGuardar"
+                HorizontalAlignment="Center"
+                Grid.Row="11"
+                Background="Green"
+                Click="btn_RegistrarMascota"
+                Content="Guardar"
+                Foreground="{StaticResource TextColor}"
+                IsEnabled="False" />
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="pet_shop.Views.UsuarioForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{StaticResource ImagenFondo}"
+    FontFamily="Comic Sans MS"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Image
+            Height="80"
+            Margin="0,30,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Source="C:\Users\l.campuzano.gonzalez\Desktop\pet_shop\Assets\perfilUsuario.png" />
+
+        <StackPanel
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <Button
+                x:Name="btnVolver"
+                Margin="10,10,10,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="BtnAtras">
+                <FontIcon Glyph="&#xE72B;" />
+            </Button>
+
+            <!--  Bloque de cabecera  -->
+            <TextBlock
+                Style="{StaticResource HeaderTextBlockStyle}"
+                x:Name="titulo"
+                HorizontalAlignment="Center"
+                Grid.Row="0"
+                Margin="0,20,0,10"
+                FontSize="20"
+                Foreground="#8E44AD"
+                Text="Registrar usuario" />
+            <InfoBar
+                x:Name="alert"
+                Margin="0,0,0,10"
+                IsOpen="False" />
+
+            <!--  Dni  -->
+            <TextBox
+                x:Name="txtDni"
+                Margin="0,0,0,10"
+                GotFocus="DniSeleccionado"
+                FontFamily="Comic Sans MS"
+                PlaceholderForeground="MediumPurple"
+                PlaceholderText="Dni / Nie"
+                TextChanged="DniCambiarTexto" />
+            <TextBlock
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                x:Name="dniErroneo"
+                FontSize="10"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Visibility="Collapsed" />
+
+            <!--  Nombre  -->
+            <TextBox
+                x:Name="txtNombre"
+                Margin="0,0,0,10"
+                PlaceholderForeground="MediumPurple"
+                FontFamily="Comic Sans MS"
+                GotFocus="NombreSeleccionado"
+                PlaceholderText="Nombre"
+                TextChanged="NombreCambiadarTexto" />
+            <TextBlock
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                x:Name="nombreErroneo"
+                FontSize="10"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Visibility="Collapsed" />
+
+            <!--  Apellido  -->
+            <TextBox
+                x:Name="txtApellido"
+                Margin="0,0,0,10"
+                PlaceholderForeground="MediumPurple"
+                FontFamily="Comic Sans MS"
+                GotFocus="ApellidoSeleccionado"
+                PlaceholderText="Apellido"
+                TextChanged="ApellidoCambiarTexto" />
+            <TextBlock
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                x:Name="apellidoErroneo"
+                FontSize="10"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Visibility="Collapsed" />
+
+            <!--  Email  -->
+            <TextBox
+                x:Name="txtEmail"
+                Margin="0,0,0,10"
+                PlaceholderForeground="MediumPurple"
+                FontFamily="Comic Sans MS"
+                GotFocus="EmailSeleccionado"
+                PlaceholderText="Email"
+                TextChanged="EmailCambiarTexto" />
+            <TextBlock
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                x:Name="emailErroneo"
+                FontSize="10"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Visibility="Collapsed" />
+
+            <!-- Teléfono -->
+            <TextBox
+                x:Name="txtTelefono"
+                Margin="0,0,0,10"
+                PlaceholderForeground="MediumPurple"
+                FontFamily="Comic Sans MS"
+                GotFocus="TelefonoSeleccionado"
+                PlaceholderText="Teléfono"
+                TextChanged="TelefonoCambiarTexto" />
+            <TextBlock
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                x:Name="telefonoErroneo"
+                FontSize="10"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Visibility="Collapsed" />
+
+            <Button
+                x:Name="btnGuardar"
+                HorizontalAlignment="Center"
+                Grid.Row="11"
+                Background="Green"
+                Click="BtnRegistrar"
+                Content="Guardar"
+                Foreground="White"
+                IsEnabled="False" />
+        </StackPanel>
+    </Grid>
+</Page>

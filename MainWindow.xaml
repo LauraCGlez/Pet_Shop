@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window
+    x:Class="pet_shop.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ImagenFondo}">
+
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical">
+                <TextBlock
+                    TextAlignment="Center"
+                    MaxWidth="600"
+                    MaxHeight="900"
+                    FontSize="40"
+                    FontWeight="Bold"
+                    FontFamily="Comic Sans MS"
+                    Foreground="#800080" 
+                    Text="Pet Shop" />
+                
+                <Image Source="C:\Users\l.campuzano.gonzalez\Desktop\pet_shop\Assets\inicio.jpg" Width="200" Height="200" Margin="0,0,0,20"></Image>
+
+                <TextBlock
+                    TextAlignment="Center"
+                    MaxWidth="600"
+                    MaxHeight="900" 
+                    FontSize="20"
+                    FontWeight="Bold"
+                    FontFamily="Comic Sans MS"
+                    Foreground="#800080" 
+                    Text="Bienvenid@ a tu tienda de confianza" />
+            </StackPanel>
+        </Grid>
+        <NavigationView
+            x:Name="nvSample"
+            IsBackButtonVisible="Collapsed"
+            IsSettingsVisible="False"
+            ItemInvoked="OnNavigationItemSelected">
+            <NavigationView.PaneHeader>
+                <StackPanel Margin="0,0,0,20" Orientation="Horizontal">
+                    <Image
+                        Width="48"
+                        Height="48"
+                        Margin="10,0,0,0"
+                        Source="C:\Users\l.campuzano.gonzalez\Desktop\pet_shop\Assets\pet_shoppin.png" />
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        Foreground="#800080" 
+                        Text="PET SHOP" 
+                        />
+                </StackPanel>
+            </NavigationView.PaneHeader>
+            <NavigationView.MenuItems>
+                <NavigationViewItem
+                    Content="Usuarios"
+                    Foreground="#800080" 
+                    Icon="ContactInfo"
+                    Tag="listadoUsuario" />
+                <NavigationViewItem
+                    Content="Productos"
+                    Foreground="#800080" 
+                    Icon="ContactInfo"
+                    Tag="listadoProductos" />
+                <NavigationViewItem
+                    Content="Registrarse"
+                    Foreground="#800080" 
+                    Icon="Admin"
+                    Tag="registrarUsuario" />
+                <NavigationViewItem
+                    Content="Registrar mascota"
+                    Foreground="#800080"
+                    Icon="Admin"
+                    Tag="registrarMascota" />
+            </NavigationView.MenuItems>
+            <Frame x:Name="ContentFrame">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition />
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+        </NavigationView>
+    </Grid>
+</Window>

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "pet_shop (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "pet_shop (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
