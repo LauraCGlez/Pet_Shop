@@ -13,12 +13,12 @@ namespace pet_shop.Views;
 /// <summary>
 /// Display Producto details data 
 /// </summary>
-public sealed partial class ListadoUsuarios : Page
+public sealed partial class ListadoUsuariosForm : Page
 {
     public Usuario Usuario { get; set; }
     private UsuarioDAO UsuarioDAO { get; set; }
 
-    public ListadoUsuarios()
+    public ListadoUsuariosForm()
     {
         InitializeComponent();
         BtnAtras.Loaded += CargarBtnAtras;

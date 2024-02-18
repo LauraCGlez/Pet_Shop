@@ -57,12 +57,12 @@
                 <NavigationViewItem
                     Content="Usuarios"
                     Foreground="#800080" 
-                    Icon="ContactInfo"
+                    Icon="OtherUser"
                     Tag="listadoUsuario" />
                 <NavigationViewItem
                     Content="Productos"
                     Foreground="#800080" 
-                    Icon="ContactInfo"
+                    Icon="Map"
                     Tag="listadoProductos" />
                 <NavigationViewItem
                     Content="Registrarse"

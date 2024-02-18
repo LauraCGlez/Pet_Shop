@@ -27,7 +27,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Click="BtnAtras">
-                <FontIcon Glyph="&#xE72B;" />
+                <Image Source="C:\Users\l.campuzano.gonzalez\Desktop\pet_shop\Assets\volver.png" Width="20" Height="20"/>
             </Button>
 
             <!--  Bloque de cabecera  -->
@@ -37,8 +37,9 @@
                 HorizontalAlignment="Center"
                 Grid.Row="0"
                 Margin="0,20,0,10"
-                FontSize="20"
+                FontSize="30"
                 Foreground="#8E44AD"
+                FontFamily="Comic Sans MS"
                 Text="Registrar usuario" />
             <InfoBar
                 x:Name="alert"

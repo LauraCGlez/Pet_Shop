@@ -51,8 +51,9 @@ public sealed partial class MascotaForm : Page
         alert.IsOpen = true;
         alert.Title = "Registro completado";
         alert.Severity = InfoBarSeverity.Success;
-        alert.Message = "La mascota " + mascota.Nombre + " registrada con exito!";      
-        Frame.Navigate(typeof(ListadoUsuarios), Usuario, new SuppressNavigationTransitionInfo());
+        alert.Message = "La mascota " + mascota.Nombre + " ha sido registrada con exito!";
+        alert.IsOpen = false;
+        Frame.Navigate(typeof(UsuariosForm), Usuario, new SuppressNavigationTransitionInfo());
     }
 
     //MANEJADORES DE LAS VALIDACIONES AL SELECCIONAR LOS CAMPOS O CAMBIAR EL TEXTO
@@ -82,24 +83,6 @@ public sealed partial class MascotaForm : Page
     }
 
     //VALIDACIONES DE LOS CAMPOS
-
-    //NUEVA MASCOTA
-    private void ValidacionNuevaMascota()
-    {
-        if (NombreValido && RazaValida && EdadValida)
-        {
-            btnGuardar.IsEnabled = true;
-            alert.IsOpen = false;
-        }
-        else
-        {
-            btnGuardar.IsEnabled = false;
-            alert.IsOpen = true;
-            alert.Title = "Mensaje de error";
-            alert.Severity = InfoBarSeverity.Error;
-            alert.Message = "Los datos de la mascota invalidos";
-        }
-    }
 
     //NOMBRE
     private void ValidadorNombre()
@@ -173,6 +156,26 @@ public sealed partial class MascotaForm : Page
             errorEdad.Visibility = Visibility.Collapsed;
             EdadValida = true;
             ValidacionNuevaMascota();
+        }
+    }
+
+    //NUEVA MASCOTA
+    private void ValidacionNuevaMascota()
+    {
+        if (NombreValido && RazaValida && EdadValida)
+        {
+            btnGuardar.IsEnabled = true;
+            alert.IsOpen = false;
+        }
+        else
+        {
+            btnGuardar.IsEnabled = false;
+            alert.IsOpen = true;
+            alert.Height = 60;
+            alert.FontSize = 12;
+            alert.Width = 200;
+            alert.Severity = InfoBarSeverity.Error;
+            alert.Message = "Los datos de la mascota invalidos";
         }
     }
 }

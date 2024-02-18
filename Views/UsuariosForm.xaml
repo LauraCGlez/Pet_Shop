@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:pet_shop.Models"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="{StaticResource PaginaBackgroundColor}"
+    Background="{StaticResource ImagenFondo}"
     mc:Ignorable="d">
 
     <ListView
@@ -27,7 +27,7 @@
                         Width="100" 
                         Height="100" 
                         CornerRadius="50" 
-                        BorderBrush="{StaticResource PaginaTitulo}" 
+                        BorderBrush="#8E44AD" 
                         BorderThickness="2">
                         <Image
                             x:Name="connectedElement"
@@ -41,7 +41,7 @@
                             Margin="0,30,0,6"
                             HorizontalAlignment="Left"
                             FontFamily="Comic Sans MS"
-                            Foreground="{StaticResource PaginaTitulo}"
+                            Foreground="#8E44AD"
                             Style="{ThemeResource SubtitleTextBlockStyle}">
                             <Run Text="{x:Bind Nombre}" />
                             <Run Text="" /> <!-- Espacio entre el nombre y el apellido -->

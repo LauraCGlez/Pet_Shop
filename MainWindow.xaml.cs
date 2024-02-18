@@ -24,9 +24,8 @@ public sealed partial class MainWindow : Window
             case "listadoUsuario":
                 ContentFrame.Navigate(typeof(UsuariosForm), null, new DrillInNavigationTransitionInfo());
                 break;
-            case "listadoProductos":
-                ContentFrame.Navigate(typeof(UsuariosForm), null, new DrillInNavigationTransitionInfo());
-                break;
+            case "listarProductos":
+                ContentFrame.Navigate(typeof(ListadoProductos), null, new DrillInNavigationTransitionInfo()); break;
             case "registrarUsuario":
                 ContentFrame.Navigate(typeof(UsuarioForm), null, new DrillInNavigationTransitionInfo());
                 break;

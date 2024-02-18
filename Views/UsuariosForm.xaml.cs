@@ -1,22 +1,10 @@
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
-using Microsoft.UI.Xaml.Navigation;
 using pet_shop.Models;
 using pet_shop.Repository;
-using pet_shop.Views;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Foundation.Metadata;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -69,7 +57,7 @@ public sealed partial class UsuariosForm : Page
             var animation = collection.PrepareConnectedAnimation("ForwardConnectedAnimation", usuarioSeleccionado, "connectedElement");
 
         }
-        Frame.Navigate(typeof(ListadoUsuarios), usuarioSeleccionado, new SuppressNavigationTransitionInfo());
+        Frame.Navigate(typeof(ListadoUsuariosForm), usuarioSeleccionado, new SuppressNavigationTransitionInfo());
     }
 
 }

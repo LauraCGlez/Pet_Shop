@@ -38,11 +38,11 @@ public sealed partial class UsuarioForm : Page
         base.OnNavigatedTo(e);
         if (e.Parameter is Usuario usuario) 
         {
-            CargarDatosForm(usuario);
+            Datos(usuario);
         }
     }
 
-    private void CargarDatosForm(Usuario usuario)
+    private void Datos(Usuario usuario)
     {
         //VERIFICADORES
         UsuarioEditado = true;
@@ -116,6 +116,9 @@ public sealed partial class UsuarioForm : Page
         else
         {
             UsuarioDAO.IncluirUsuario(usuario);
+            alert.FontSize = 5;
+            alert.Height = 90;
+            alert.Width = 200;  
             alert.IsOpen = true;
             alert.Title = "¡Enhorabuena!";
             alert.Severity = InfoBarSeverity.Success;
@@ -220,12 +223,12 @@ public sealed partial class UsuarioForm : Page
     private void ValidadorEmail()
     {
         string Email = txtEmail.Text;
-        string ComprobarEmail = ".*@petshoppin\\.com";
+        string ComprobarEmail = ".*@petshop\\.com";
 
         if (string.IsNullOrEmpty(Email) || string.IsNullOrWhiteSpace(Email) || !Regex.IsMatch(Email, ComprobarEmail))
         {
             emailErroneo.Visibility = Visibility.Visible;
-            emailErroneo.Text = "Campo obligatorio: ****@petshoppin.com";
+            emailErroneo.Text = "Campo obligatorio: ****@petshop.com";
             EmailValido = false;
         }
         else if (!Email.IsEmail())

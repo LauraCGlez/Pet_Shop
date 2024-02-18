@@ -10,22 +10,39 @@
     <PublishProfile>win10-$(Platform).pubxml</PublishProfile>
     <UseWinUI>true</UseWinUI>
     <EnableMsixTooling>true</EnableMsixTooling>
+    <ApplicationIcon>Assets\pet_shoppin.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Content Remove="Assets\fondo.jpg" />
-    <Content Remove="Assets\hueso.jpg" />
-    <Content Remove="Assets\inicio.jpg" />
-    <Content Remove="Assets\perfilUsuario.png" />
-    <Content Remove="Assets\pet_shoppin.ico" />
-    <Content Remove="Assets\pet_shoppin.png" />
-  </ItemGroup>
+    <Content Remove="Assets\casa.ico" />
+    <Content Remove="Assets\datos-de-contacto.ico" />
+    <Content Remove="Assets\datos-de-contacto.png" />
+    <Content Remove="Assets\editar.ico" />
+    <Content Remove="Assets\eliminar.ico" />
+    <Content Remove="Assets\ganado.ico" />
+    <Content Remove="Assets\ganado.png" />
+    <Content Remove="Assets\huellas-de-garras.ico" />
+    <Content Remove="Assets\huellas-de-garras.png" />
+    <Content Remove="Assets\intimidad.ico" />
+    <Content Remove="Assets\intimidad.png" />
+    <Content Remove="Assets\SplashScreen.ico" />
+    <Content Remove="Assets\volver.ico" />
+  </ItemGroup> 
   <ItemGroup>
-    <Page Remove="Views\ListadoProductosForm.xaml" />
-    <Page Remove="views\ProductoForm.xaml" />
-    <Page Remove="views\ProductosForm.xaml" />
+    <Content Include="Assets\casa.png" />
+    <Content Include="Assets\editar.png" />
+    <Content Include="Assets\eliminar.png" />
+    <Content Include="Assets\fondo.jpg" />
+    <Content Include="Assets\hueso.jpg" />
+    <Content Include="Assets\inicio.jpg" />
+    <Content Include="Assets\perfilMascotas.png" />
+    <Content Include="Assets\perfilUsuario.png" />
+    <Content Include="Assets\pet_shoppin.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\volver.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Collections" Version="5.0.0" />
     <PackageReference Include="CommunityToolkit.WinUI.UI.Controls" Version="7.1.2" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230913002" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.755" />
@@ -42,15 +59,26 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="Views\ListadoProductosForm.xaml">
+    <Page Update="Views\ListadoProductos.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="Views\ProductoForm.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Views\ListadoUsuariosForm.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="Views\ProductosForm.xaml">
+    </Page>
+    <Page Update="Views\MascotaForm.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <Generator>MSBuild:Compile</Generator>
-    </None>
+    </Page>
+    <Page Update="Views\UsuarioForm.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\UsuariosForm.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <!-- 

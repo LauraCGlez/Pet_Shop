@@ -12,8 +12,8 @@ public class Producto
     public string Nombre { get; set; }
     public string Descripcion { get; set; }
     public string Foto { get; set; }
-    public int Cantidad { get; set; };
-    public List<Producto> Usuarios { get; set; }
+    public int Cantidad { get; set; }
+    public List<Producto> Productos { get; set; }
 
     public Producto(
         string id,
@@ -26,12 +26,12 @@ public class Producto
         Nombre = nombre;
         Descripcion = descripcion;
         Foto = foto;
-        Usuarios = new List<Producto>();
+        Productos = new List<Producto>();
         Cantidad = cantidad;
     }
 
     public void AgregarComprador(Producto usuario)
     {
-        Usuarios.Add(usuario);
+        Productos.Add(usuario);
     }
 }

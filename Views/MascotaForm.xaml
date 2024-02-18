@@ -14,7 +14,7 @@
             Margin="0,30,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Source="C:\Users\34618\Workspace_C#\club_papaya\Assets\boat.png" />
+            Source="C:\Users\l.campuzano.gonzalez\Desktop\pet_shop\Assets\perfilMascotas.png" />
 
         <StackPanel
             Margin="10"
@@ -26,13 +26,16 @@
                 x:Name="titulo"
                 Grid.Row="0"
                 Margin="0,0,0,10"
-                Foreground="{StaticResource PaginaTitulo}"
+                Foreground="#8E44AD"
                 Style="{ThemeResource HeaderTextBlockStyle}"
                 Text="Registrar Mascota" />
 
             <!--  Validacion Mascota  -->
             <InfoBar
                 x:Name="alert"
+                FontSize="10"
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Background="Silver"
                 Margin="0,0,0,10"
                 IsOpen="False" />
 
@@ -40,10 +43,10 @@
             <TextBox
                 x:Name="txtNombre"
                 Margin="0,0,0,10"
-                Background="{StaticResource InputBoxColor}"
-                Foreground="{StaticResource TextColor}"
+                Background="#8E44AD"
+                Foreground="#800080"
+                PlaceholderForeground="#E6E6FA"
                 GotFocus="NombreSeleccionado"
-                PlaceholderForeground="{StaticResource PlaceHolderColor}"
                 PlaceholderText="Nombre"
                 TextChanged="NombreCambiarTexto" />
             <!--  Validacion Nombre  -->
@@ -54,14 +57,14 @@
                 Style="{ThemeResource CaptionTextBlockStyle}"
                 Visibility="Collapsed" />
 
-            <!--  MooringNumber  -->
+            <!--  Raza  -->
             <TextBox
                 x:Name="txtRaza"
                 Margin="0,0,0,10"
-                Background="{StaticResource InputBoxColor}"
-                Foreground="{StaticResource TextColor}"
+                Background="#8E44AD"
+                Foreground="#800080"
+                PlaceholderForeground="#E6E6FA"
                 GotFocus="RazaSeleccionada"
-                PlaceholderForeground="{StaticResource PlaceHolderColor}"
                 PlaceholderText="Raza"
                 TextChanged="RazaCambiarTexto" />
             <!--  Validacion Raza  -->
@@ -75,11 +78,12 @@
             <!--  Edad  -->
             <TextBox
                 x:Name="txtEdad"
+                
+                Background="#8E44AD"
+                Foreground="#800080"
+                PlaceholderForeground="#E6E6FA"
                 Margin="0,0,0,10"
-                Background="{StaticResource InputBoxColor}"
-                Foreground="{StaticResource TextColor}"
                 GotFocus="EdadSeleccionada"
-                PlaceholderForeground="{StaticResource PlaceHolderColor}"
                 PlaceholderText="Edad"
                 TextChanged="EdadCambiarTexto" />
             <!--  Validacion Edad  -->
@@ -94,11 +98,11 @@
             <ComboBox
                 x:Name="cmbUsuarios"
                 Margin="0,0,0,10"
-                Background="{StaticResource InputBoxColor}"
+                Background="#8E44AD"
+                Foreground="#800080"
+                PlaceholderForeground="#E6E6FA"
                 DisplayMemberPath="Nombre"
-                Foreground="{StaticResource TextColor}"
                 ItemsSource="{x:Bind Usuarios, Mode=OneWay}"
-                PlaceholderForeground="{StaticResource PlaceHolderColor}"
                 PlaceholderText="Seleccione un usuario"
                 SelectionChanged="CmbUsuarios" />
            
@@ -118,7 +122,7 @@
                 Background="Green"
                 Click="btn_RegistrarMascota"
                 Content="Guardar"
-                Foreground="{StaticResource TextColor}"
+                Foreground="#800080"
                 IsEnabled="False" />
         </StackPanel>
     </Grid>

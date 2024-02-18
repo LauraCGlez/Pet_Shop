@@ -12,7 +12,17 @@ public class ProductoDAO
 
     public ProductoDAO() 
     {
-        Producto = new List<Producto>();
+        Producto = new List<Producto>
+        {
+            new Producto
+            (
+                "1",
+                "Hueso",
+                "Juguete para los dientes",
+                "C:\\Users\\l.campuzano.gonzalez\\Desktop\\pet_shop\\Assets\\hueso.jpg",
+                2
+                )
+        };
     }
 
     public static ProductoDAO Instance
