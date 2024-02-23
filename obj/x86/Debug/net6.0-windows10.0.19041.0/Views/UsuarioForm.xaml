@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="pet_shop.Views.UsuarioForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{StaticResource ImagenFondo}"
+    FontFamily="Comic Sans MS"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Image
+            Height="80"
+            Margin="0,30,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Source="C:\Users\l.campuzano.gonzalez\Desktop\pet_shop\Assets\perfilUsuario.png" />
+
+        <StackPanel
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <Button x:ConnectionId='2'
+                x:Name="btnVolver"
+                Margin="10,10,10,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                                >
+                <Image Source="C:\Users\l.campuzano.gonzalez\Desktop\pet_shop\Assets\volver.png" Width="20" Height="20"/>
+            </Button>
+
+            <!--  Bloque de cabecera  -->
+            <TextBlock x:ConnectionId='3'
+                Style="{StaticResource HeaderTextBlockStyle}"
+                x:Name="titulo"
+                HorizontalAlignment="Center"
+                Grid.Row="0"
+                Margin="0,20,0,10"
+                FontSize="30"
+                Foreground="#8E44AD"
+                FontFamily="Comic Sans MS"
+                Text="Registrar usuario" />
+            <InfoBar x:ConnectionId='4'
+                x:Name="alert"
+                Margin="0,0,0,10"
+                IsOpen="False" />
+
+            <!--  Dni  -->
+            <TextBox x:ConnectionId='5'
+                x:Name="txtDni"
+                Margin="0,0,0,10"
+                                          
+                FontFamily="Comic Sans MS"
+                PlaceholderForeground="MediumPurple"
+                PlaceholderText="Dni / Nie"
+                                              />
+            <TextBlock x:ConnectionId='6'
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                x:Name="dniErroneo"
+                FontSize="10"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Visibility="Collapsed" />
+
+            <!--  Nombre  -->
+            <TextBox x:ConnectionId='7'
+                x:Name="txtNombre"
+                Margin="0,0,0,10"
+                PlaceholderForeground="MediumPurple"
+                FontFamily="Comic Sans MS"
+                                             
+                PlaceholderText="Nombre"
+                                                   />
+            <TextBlock x:ConnectionId='8'
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                x:Name="nombreErroneo"
+                FontSize="10"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Visibility="Collapsed" />
+
+            <!--  Apellido  -->
+            <TextBox x:ConnectionId='9'
+                x:Name="txtApellido"
+                Margin="0,0,0,10"
+                PlaceholderForeground="MediumPurple"
+                FontFamily="Comic Sans MS"
+                                               
+                PlaceholderText="Apellido"
+                                                   />
+            <TextBlock x:ConnectionId='10'
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                x:Name="apellidoErroneo"
+                FontSize="10"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Visibility="Collapsed" />
+
+            <!--  Email  -->
+            <TextBox x:ConnectionId='11'
+                x:Name="txtEmail"
+                Margin="0,0,0,10"
+                PlaceholderForeground="MediumPurple"
+                FontFamily="Comic Sans MS"
+                                            
+                PlaceholderText="Email"
+                                                />
+            <TextBlock x:ConnectionId='12'
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                x:Name="emailErroneo"
+                FontSize="10"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Visibility="Collapsed" />
+
+            <!-- Teléfono -->
+            <TextBox x:ConnectionId='13'
+                x:Name="txtTelefono"
+                Margin="0,0,0,10"
+                PlaceholderForeground="MediumPurple"
+                FontFamily="Comic Sans MS"
+                                               
+                PlaceholderText="Teléfono"
+                                                   />
+            <TextBlock x:ConnectionId='14'
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                x:Name="telefonoErroneo"
+                FontSize="10"
+                Margin="0,0,0,10"
+                Foreground="Red"
+                Visibility="Collapsed" />
+
+            <Button x:ConnectionId='15'
+                x:Name="btnGuardar"
+                
+                HorizontalAlignment="Center"
+                Grid.Row="11"
+                Background="Green"
+                                    
+                Content="Guardar"
+                Foreground="White"
+                IsEnabled="False" />
+        </StackPanel>
+    </Grid>
+</Page>
+
